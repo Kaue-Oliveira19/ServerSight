@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Sobre - ServerSight</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    </head>
+    <body class="body">
+        <!--Menu Hamburguer do site que fica no canto superior direito do site-->
+        <nav class="navbar navbar-dark bg-dark fixed-top" id="Nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('controller_form.exibir_index') }}" id="Titulo_nav">ServerSight</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <!--Logo do Site com link para a home-->
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ServerSight</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <!--Link para o usuário voltar para a página Home do site-->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('controller_form.exibir_index') }}">Home</a>
+                            </li>
+                            <!--Link para o usuário ir para a página Sobre do site-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.exibir_sobre') }}">Sobre</a>
+                            </li>
+                            <!--Links para o usuário ir para a seção de conteúdos textuais da página Home-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Conteúdos
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="{{ url_for('controller_form.exibir_index') }}#irConteudos">Emergia</a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for('controller_form.exibir_index') }}#irConteudos">Servidores</a></li>
+                                    <li><a class="dropdown-item" href="{{ url_for('controller_form.exibir_index') }}#irConteudos">Sustentabilidade em Data Centers</a></li>
+                                </ul>
+                            </li>
+                            <!--Link para o usuário ir para a página Calculadora-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.calcular_emergia') }}">Calculadora</a>
+                            </li>
+                            <!--Link para o usuário ir para a seção de Enviar Dúvida na página Home-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.exibir_index') }}#irDuvidas">Enviar Dúvida</a>
+                            </li>
+                            <!--Link para o usuário voltar para a página de Login-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.exibir_login') }}">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--Container do contéudo da página Sobre-->
+        <div class="Caixa20">
+            <!--Parte esquerda da seção Sobre, que explica o objetivo do site-->
+            <div class="Caixa21">
+                <h1 class="Titulo3">Sobre o ServerSight</h1>
+                <br>
+                <p class="Texto9">A ServerSight, é um website onde as pessoas poderão adquirir e aprender conceitos básicos sobre Emergia, Servidores, Eficiência Energética e Sustentabilidade em Data Centers, através de curtos conteúdos textuais.</p>
+                <p class="Texto9">
+                Mas nós temos como o principal objetivo, disponibilizar uma calculadora com foco em Emergia de Servidores, onde ela saberá o quanto de recursos um ou mais servidores gastam com a questão do resfriamento.</p>
+            </div>
+            <!--Parte direita da seção Sobre, que mostra o LinkedIn dos participantes do desenvolvimento do site-->
+            <div class="Caixa22">
+                <h1 class="Titulo3">Participantes do projeto</h1>
+                <br>
+                <h1 class="Texto8">Responsável pelo Front-End</h1>
+                <p class="Texto10"><a href="https://www.linkedin.com/in/valter-antônio-romeiro-oliveira-657551235/"  target="_blank">Valter Antonio</a></p>
+                
+                <h1 class="Texto8">Responsáveis pelo conteúdo textual</h1>
+        
+                <p class="Texto10"><a href="https://www.linkedin.com/in/lucas-pereira-solera-8792ab226/"  target="_blank">Lucas Pereira</a></p>
+
+                <p class="Texto10"><a href="https://www.linkedin.com/in/marks-m-galindo-312490237/"  target="_blank">Marks Miranda</a></p>
+
+                <p class="Texto10"><a href="https://www.linkedin.com/in/thiago-c-0615a3225/"  target="_blank">Thiago Nascimento</a></p>
+
+                <h1 class="Texto8">Responsáveis pelo Back-End</h1>
+                <p class="Texto10"><a href="https://www.linkedin.com/in/kau%C3%AA-oliveira-5a2017259/"  target="_blank">Kauê Oliveira</a></p>  
+                <p class="Texto10"><a href="https://www.linkedin.com/in/paulo-henrique-6720762b2/"  target="_blank">Paulo Henrique</a></p>
+            </div>
+        </div>
+
+        <!--Parte inferior do site-->
+        <div class="Footer">
+            <!--Linha que fica em cima do texto dos direitos autorais-->
+            <div class="Linha3">
+                <hr>
+            </div>
+
+            <!--Container do Footer e parte inferior do site-->
+            <footer>
+                <!--Container do texto de direitos autorais-->
+                <div>
+                    <!--Texto sobre os direito autorais do site-->
+                    <p>Todos os direitos reservados para ServerSight©</p>
+                </div>
+            </footer>
+        </div>
+        <!--Link do JavaScript do Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Link do JavaScript da tabela de usuários-->
+        <script src="{{ url_for('static', filename='JS/tabela.js') }}"></script>
+    </body>
+</html>

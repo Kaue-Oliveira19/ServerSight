@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Home - ServerSight</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='CSS/Styles.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <!--Menu Hamburguer do site que fica no canto superior direito do site-->
+        <nav class="navbar navbar-dark bg-dark fixed-top" id="Nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url_for('controller_form.exibir_index') }}" id="Titulo_nav">ServerSight</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <!--Logo do Site com link para a home-->
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ServerSight</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <!--Link para o usuário voltar para a página Home do site-->
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{ url_for('controller_form.exibir_index') }}">Home</a>
+                            </li>
+                            <!--Link para o usuário ir para a página Sobre do site-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.exibir_sobre') }}">Sobre</a>
+                            </li>
+                            <!--Links para o usuário ir para a seção de conteúdos textuais da página Home-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Conteúdos
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="#irConteudos">Emergia</a></li>
+                                    <li><a class="dropdown-item" href="#irConteudos">Servidores</a></li>
+                                    <li><a class="dropdown-item" href="#irConteudos">Sustentabilidade em Data Centers</a></li>
+                                </ul>
+                            </li>
+                            <!--Link para o usuário ir para a página Calculadora-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.calcular_emergia') }}">Calculadora</a>
+                            </li>
+                            <!--Link para o usuário ir para a seção de Enviar Dúvida na página Home-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#irDuvidas">Enviar Dúvida</a>
+                            </li>
+                            <!--Link para o usuário voltar para a página de Login-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('controller_form.exibir_login') }}">Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--1° Seção - Bem-Vindo ao ServerSight-->
+        <section class="Secao1">
+            <div class="Titulo2">
+                <h3>Bem-Vindo ao ServerSight</h3>
+            </div>
+            <div class="Secao11">
+                <!--Quadrado 1 - Com link para a página Sobre-->
+                <div class="Card1">
+                    <a href="{{ url_for('controller_form.exibir_sobre') }}">
+                        <div>
+                            <figure>
+                                <img src="{{ url_for('static', filename='Imagens/Sobre.jpg') }}" alt="">
+                            </figure>
+                        </div>
+                        <div>
+                            <h5 class="Titulo3">Sobre</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Quadrado 2 - Com link para a seção com o conteúdo textual Emergia-->
+                <div class="Card2">
+                    <a href="#irConteudos">
+                        <div>
+                            <figure>
+                                <img src="{{ url_for('static', filename='Imagens/Emergia.jpg') }}" alt="">
+                            </figure>
+                        </div>
+                        <div>
+                            <h5 class="Titulo3">Emergia</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Quadrado 3 - Com link para a seção com o conteúdo textual Servidores-->
+                <div class="Card3">
+                    <a href="#irConteudos">
+                        <div>
+                            <figure>
+                                <img src="{{ url_for('static', filename='Imagens/Servidores.jpg') }}" alt="Imagens de servidores">
+                            </figure>
+                        </div>
+                        <div>
+                            <h5 class="Titulo3">Servidores</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <!--Quadrado 4 - Com link para a página Calculadora-->
+                <div class="Card4">
+                    <a href="{{ url_for('controller_form.calcular_emergia') }}">
+                        <div>
+                            <figure>
+                                <img src="{{ url_for('static', filename='Imagens/Calculadora.png') }}" alt="">
+                            </figure>
+                        </div>
+                        <div>
+                            <h5 class="Titulo3">Calculadora</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <a name="irConteudos"></a>
+
+        <!--2° Seção - Conteúdo textuais-->
+        <section class="Secao2">
+            <div class="Caixa4">
+                <!--Contéudo textual sobre Sustentabilidade em Data Centers-->
+                <div class="Caixa5">
+                    <h4 class="Titulo4">Sustentabilidade em Data Centers</h4>
+                    <p class="Texto3">Historicamente, o resfriamento de data centers tem sido realizado por meio de sistemas de ar condicionado que utilizam ar pressurizado sob pisos elevados. Esses sistemas, conhecidos como CRAC (Computer Room Air Conditioner) ou CRAH (Computer Room Air Handler), têm eficiência limitada, especialmente em ambientes com alta densidade de servidores. (Resfriamento por imersão em líquido para data centers - Park Place Technologies) <br><br>
+                        Inovações em Resfriamento
+                        Com o aumento da densidade computacional e a crescente preocupação ambiental, novas tecnologias de resfriamento têm sido desenvolvidas: <br><br>
+                        •    Resfriamento Adiabático: Utiliza o ar externo para resfriar os servidores, reduzindo o consumo de água e energia.<br><br>
+                        •    Resfriamento por Imersão: Consiste em submergir os servidores em líquidos dielétricos que dissipam o calor de forma eficiente.<br><br> 
+                        •    Circuitos Fechados de Água: Sistemas que reciclam a água utilizada no resfriamento, minimizando o desperdício
+                    </p>
+                </div>
+
+                <!--Conteúdo textual sobre O que é Emergia-->
+                <div class="Caixa6">
+                    <a name="irEmergia"><h4 class="Titulo4">O que é Emergia?</h4></a>
+                    <p class="Texto3">O conceito de emergia é definido como a energia total disponível que é direta e indiretamente necessária para formar um recurso, produto ou serviço. Além disso, é uma importante alternativa à avaliação de mercado que visa determinar o valor de projetos ambientais importantes para a sociedade. Esse conceito é usado para expressar a importância do valor do trabalho ambiental e econômico. (MENEGAKI, 2007)
+                    </p>
+                </div>
+
+                <a name="irCalculadora"></a>
+
+                <!--Contéudo textual sobre O que são servidores?-->
+                <div class="Caixa7">
+                    <a name="irServidores"><h4 class="Titulo4">O que são servidores?</h4></a>
+                    <p class="Texto3">De acordo com Siddiqui (2024), “Um servidor é um computador ou programa de software poderoso projetado para facilitar e gerenciar tarefas baseadas em rede, permitindo que dispositivos e usuários acessem recursos compartilhados de forma eficiente”. É importante detalhar que um servidor é criado para lidar com várias solicitações simultaneamente, operando 24 horas por dia, já os computadores pessoais são otimizados para o uso individual. (SIDDIQUI, 2024)
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--3° Seção - Como é realizado o cálculo-->
+        <section class="Secao5">
+            <div class="Caixa9">
+                <!--Texto sobre como é realizado o cálculo-->
+                <div class="Caixa11">
+                    <!--Título da seção 6-->
+                    <h4 class="Titulo4">Como é realizado o cálculo</h4><br>
+                    <p class="Texto7">
+                        Como foi calculado a energia total do servidor?<br><br>
+                    </p>
+                    <p class="Texto8">
+                        Energia_Total = QtdServidores X Consumo_Servidor<br><br></p>
+                    <p class="Texto7">
+                        Como foi calculado o fator de resfriamento?<br><br></p>
+                    <p class="Texto8">
+                        Energia_Resfriamento = Energia_Total X Fator_Resfriamento<br><br>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--4° Seção - Enviar Dúvida-->
+        <section class="Secao6">
+            <div class="Caixa12">
+                <!--Container com o título da seção 7-->
+                <div class="Titulo6"><br>
+                    <a name="irDuvidas"><h3>Enviar Dúvida</h3></a>
+                </div>
+                
+                <!--Formúlario para o usuário escrever e enviar uma dúvida para a ServerSight-->
+                <form>
+                    <!--Input para o usuario digitar o email pessoal dele-->
+                    <div>
+                        <label for="email" class="Texto4">Email</label>
+                        <br>
+                        <input type="email" id="email" class="input">
+                        <hr>
+                        <br>
+                    </div>
+
+                    <!--Área para o usuário escrever a dúvida-->
+                    <div>
+                        <label for="duvida" class="Texto4">Dúvida</label>
+                        <br>
+                        <textarea id="duvida" name="duvida" rows="6" cols="100"></textarea>
+                    </div>
+
+                    <!--Botão para o usuário enviar uma dúvida-->
+                    <div>
+                        <input type="submit" id="btnComentario" class="botao" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!--Parte inferior do site-->
+        <div class="Footer2">
+            <!--Linha que fica em cima do texto dos direitos autorais-->
+            <div class="Linha4">
+                <hr>
+            </div>
+    
+            <!--Container do Footer e parte inferior do site-->
+            <footer>
+                <!--Container do texto de direitos autorais-->
+                <div>
+                    <!--Texto sobre os direito autorais do site-->
+                    <p>Todos os direitos reservados para ServerSight©</p>
+                </div>
+            </footer>
+        </div>
+        <!--Link do JavaScript do Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Links do JavaScript-->
+        <script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+        <script src="{{ url_for('static', filename='JS/login.js') }}"></script>
+    </body>
+</html>

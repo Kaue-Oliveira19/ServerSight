@@ -1,0 +1,1384 @@
+/* ======================== */
+/* VARIÁVEIS        */
+/* ======================== */
+:root {
+  --Cor1: #153757;
+  --Cor2: #2e3438;
+  --Cor3: #ff914d;
+  --Cor4: white;
+  --Cor5: #273540;
+  --Cor6: black;
+  --Cor7: #e05e0d;
+  --Cor8: #c0c0c0;
+}
+
+/* ======================== */
+/* ESTILOS GERAIS      */
+/* ======================== */
+.body {
+  background-color: var(--Cor1);
+  box-sizing: border-box;
+  margin: auto;
+  padding: auto; /* Ou o container pai que ocupa a tela */
+  justify-content: center; /* Centraliza horizontalmente o .Secao11 */
+  align-items: center;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.Senha {
+  text-decoration: none;
+  color: var(--Cor4);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Senha:hover {
+  color: var(--Cor3);
+  font-size: 14px;
+  font-weight: bold;
+  transition: 1s;
+  text-decoration: underline;
+}
+.Senha2 {
+  margin-left: 2%;
+  text-decoration: none;
+  color: var(--Cor4);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Senha2:hover {
+  color: var(--Cor3);
+  font-size: 14px;
+  font-weight: bold;
+  transition: 1s;
+  text-decoration: underline;
+}
+.Cadastrar-se {
+  text-decoration: none;
+  color: var(--Cor4);
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10%;
+}
+
+/* ======================== */
+/* BARRA DE NAVEGAÇÃO   */
+/* ======================== */
+#Nav {
+  background-color: var(--Cor2) !important;
+  border-bottom: var(--Cor4) solid 2px;
+}
+
+#Titulo_nav {
+  color: var(--Cor4) !important;
+  margin-left: 2%;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+/* ======================== */
+/* CAIXAS          */
+/* ======================== */
+.Caixa1 {
+  border-top: solid 3px var(--Cor3);
+  background-color: var(--Cor5);
+  height: 520px;
+  width: 500px;
+  border-radius: 7px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  color: var(--Cor4);
+}
+
+/* ===== Caixa2 ===== */
+.Caixa2 {
+  width: 400px;
+  border-radius: 7px;
+  margin: 0;
+  padding: 20px;
+}
+
+.Caixa2 input[type="text"],
+.Caixa2 input[type="email"],
+.Caixa2 input[type="password"] {
+  background-color: var(--Cor5);
+  border: none;
+  bottom: 0;
+  width: 370px;
+  color: var(--Cor4);
+  margin-top: 5%;
+  font-size: 16px;
+  height: 30px;
+}
+
+.Caixa2 input[type="text"]:focus,
+.Caixa2 input[type="email"]:focus,
+.Caixa2 input[type="password"]:focus,
+.Caixa2 input[type="text"]:active,
+.Caixa2 input[type="email"]:active,
+.Caixa2 input[type="password"]:active {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+  background-color: inherit;
+}
+
+.Caixa2 input[type="submit"] {
+  margin: 10% 0% 0% 25%;
+  text-align: center;
+  width: 200px;
+  background-color: var(--Cor4);
+  border: none;
+  border-radius: 5px;
+}
+
+.Caixa2 hr {
+  margin-top: -3px;
+  background-color: var(--Cor3);
+  height: 4px;
+  border: none;
+  opacity: 1;
+}
+
+/* ===== Caixa3 ===== */
+.Caixa3 {
+  width: 400px;
+  border-radius: 7px;
+  margin: 0;
+  
+}
+
+.Caixa3 input[type="text"],
+.Caixa3 input[type="password"] {
+  background-color: var(--Cor5);
+  border: none;
+  bottom: 0;
+  width: 100%;
+  color: var(--Cor4);
+  margin-top: 5%;
+  font-size: 16px;
+  height: 30px;
+}
+
+.Caixa3 input[type="text"]:focus,
+.Caixa3 input[type="password"]:focus,
+.Caixa3 input[type="text"]:active,
+.Caixa3 input[type="password"]:active {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+  background-color: inherit;
+}
+
+.Caixa3 .botao {
+  margin-top: 10%;
+  text-align: center;
+  width: 100%;
+  background-color: var(--Cor4);
+  border: none;
+  border-radius: 5px;
+}
+
+.Caixa3 hr {
+  margin-top: -3px;
+  background-color: var(--Cor3);
+  height: 4px;
+  border: none;
+  opacity: 1;
+}
+
+/* ===== Caixa4, Caixa5, Caixa6, Caixa7, Caixa8 ===== */
+.Caixa4 {
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 3fr 1fr;
+  gap: 5px;
+  
+}
+
+.Caixa5 {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 5px;
+  color: white;
+  background-color: var(--Cor2);
+  border-radius: 7px;
+}
+
+.Caixa6 {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 5px;
+  color: white;
+  background-color: var(--Cor2);
+  border-radius: 7px;
+}
+
+.Caixa7 {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 5px;
+  color: white;
+  background-color: var(--Cor2);
+  border-radius: 7px;
+}
+
+.Caixa8 {
+  width: auto;
+  height: auto;
+  padding-top: 30px;
+  
+}
+
+/* Posicionamento no grid */
+.Caixa5 {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+}
+
+.Caixa6 {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.Caixa7 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.Caixa9 {
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  background-color: var(--Cor2);
+  display: flex; /* ATIVA o flexbox */
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
+  border-radius: 7px;
+}
+
+.Caixa10 {
+  background-color: var(--Cor5);
+  height: 500px;
+  width: 1200px;
+  border-radius: 7px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  color: var(--Cor4);
+  border-top: solid 4px var(--Cor3);
+}
+
+.Caixa11 {
+  width: auto;
+  height: auto;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  padding: auto;
+  background-color: var(--Cor2);
+
+}
+.Caixa11 input[type="button"] {
+  background-color: var(--Cor8);
+  border: none;
+  bottom: 0;
+  width: 150px;
+  color: var(--Cor6);
+  margin: auto;
+  font-size: 16px;
+  height: 30px;
+  border-radius: 7px;
+  color: var(--Cor6);
+  padding-left: 10px;
+  appearance: none; /* Para a maioria dos navegadores */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.Caixa12 {
+  background-color: var(--Cor2);
+  height: 500px;
+  width: 950px;
+  border-radius: 7px;
+  color: var(--Cor4);
+  margin: auto;
+}
+
+.Caixa12 input[type="textarea"],
+.Caixa12 input[type="email"] {
+  background-color: var(--Cor2);
+  border: none;
+  bottom: 0;
+  width: 590px;
+  color: var(--Cor4);
+  margin-top: 1%;
+  font-size: 16px;
+  height: 30px;
+}
+
+.Caixa12 input[type="email"]:focus,
+.Caixa12 input[type="email"]:active,
+.Caixa12 input[type="textarea"]:focus,
+.Caixa12 input[type="textarea"]:active {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+  background-color: inherit;
+}
+
+.Caixa12 input[type="submit"] {
+  text-align: center;
+  width: 100%;
+  background-color: var(--Cor4);
+  border: none;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+
+.Caixa12 form {
+  width: 600px;
+  margin: auto;
+}
+
+.Caixa12 hr {
+  margin: auto;
+  height: 10px;
+  color: var(--Cor4);
+  height: 4px;
+  opacity: 1;
+}
+
+.Caixa12 textarea {
+  margin-top: 2%;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--Cor4);
+  color: var(--Cor4);
+  font-size: 16px;
+  resize: vertical; /* ou none para desabilitar */
+}
+
+.Caixa13 {
+  background-color: var(--Cor5);
+  height: 320px;
+  width: 500px;
+  border-radius: 7px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  color: var(--Cor4);
+  border-top: solid 4px var(--Cor3);
+}
+
+.Caixa14 {
+  background-color: var(--Cor5);
+  height: 450px;
+  width: 500px;
+  border-radius: 7px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  color: var(--Cor4);
+  border-top: solid 4px var(--Cor3);
+}
+.Caixa15 {
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  margin-top: 30px;
+  display: inline-block;
+  justify-content: center;
+  justify-items: center;
+  text-align: justify;
+  padding: 50px;
+}
+.Caixa16 {
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  margin-top: 30px;
+  display: inline-block;
+  justify-content: center;
+  justify-items: center;
+  text-align: justify;
+  padding: 50px;
+}
+.Caixa17 {
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  margin-top: 30px;
+  display: inline-block;
+  justify-content: center;
+  justify-items: center;
+  text-align: justify;
+  padding: 50px;
+}
+
+.Caixa15 input[type="number"],
+.Caixa16 input[type="number"] {
+  background-color: var(--Cor8);
+  border: none;
+  bottom: 0;
+  width: 100px;
+  color: var(--Cor6);
+  margin-top: 3%;
+  font-size: 16px;
+  height: 30px;
+  border-radius: 7px;
+  color: var(--Cor6);
+  padding-left: 10px;
+  appearance: none; /* Para a maioria dos navegadores */
+}
+
+.Caixa15 input[type=number]::-webkit-inner-spin-button,
+.Caixa16 input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.Caixa15 input[type=number]::-webkit-outer-spin-button,
+.Caixa16 input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.Caixa16 select{
+  background-color: var(--Cor8);
+  border: none;
+  bottom: 0;
+  width: 80px;
+  color: var(--Cor4);
+  margin-top: 3%;
+  font-size: 16px;
+  height: 30px;
+  border-radius: 7px;
+  color: var(--Cor6);
+  padding-left: 10px;
+  cursor: pointer;
+}
+.Caixa18 input[type="submit"] {
+  background-color: var(--Cor3);
+  border: none;
+  width: 100px;
+  color: var(--Cor6);
+  font-size: 16px;
+  height: 30px;
+  border-radius: 7px;
+  color: var(--Cor6);
+  cursor: pointer;
+}
+.Caixa18 input[type="submit"]:hover {
+  background-color: var(--Cor7);
+  border: none;
+  width: 100px;
+  color: var(--Cor6);
+  font-size: 16px;
+  height: 30px;
+  border-radius: 7px;
+  color: var(--Cor6);
+  cursor: pointer;
+  transition: 1s;
+}
+
+.Caixa17 select{
+  background-color: var(--Cor8);
+  border: none;
+  bottom: 0;
+  width: 125px;
+  color: var(--Cor4);
+  margin-top: 5%;
+  font-size: 16px;
+  height: 30px;
+  border-radius: 7px;
+  color: var(--Cor6);
+  padding-left: 10px;
+  cursor: pointer;
+}
+.Caixa18 {
+  background-color: var(--Cor2);
+  height: 400px;
+  width: 950px;
+  border-radius: 7px;
+  color: var(--Cor4);
+  margin: auto;
+  padding: auto;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.Caixa19 {
+  width: 100px;
+  height: 30px;
+  margin: auto;}
+
+.Caixa20 {
+  background-color: var(--Cor5);
+  height: 500px;
+  width: 1200px;
+  border-radius: 7px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; /* Adicionado para ativar flexbox */
+  justify-content: space-around;
+  align-items: stretch;
+  color: var(--Cor4);
+  border-top: solid 4px var(--Cor3);
+}
+
+.Caixa21 {
+  width: 600px; /* Mantenha a largura se for o que você quer, mas o padding interno do texto é crucial */
+  height: 400px;
+ 
+  /* display: inline-block; não é mais necessário com display: flex no pai */
+  margin: 30px;
+  /* Você pode adicionar um padding aqui se quiser que a Caixa21 tenha um padding interno geral,
+     mas para o texto, o padding no .Texto9 é mais específico */
+}
+
+.Caixa22 {
+  width: 350px;
+  height: 400px;
+  border-left: dotted 2px var(--Cor3);
+  border-right: dotted 2px var(--Cor3);
+  /* display: inline-block; não é mais necessário com display: flex no pai */
+  margin: 30px;
+}
+
+/* ======================== */
+/* LINHAS          */
+/* ======================== */
+.Linha1 hr,
+.Linha2 hr {
+  background-color: var(--Cor3);
+  height: 4px;
+  width: 220px;
+  border: none;
+  opacity: 1;
+  margin-top: -5%;
+  margin-left: 8%;
+  position: absolute;
+}
+
+.Linha3 hr {
+  background-color: var(--Cor4);
+  height: 4px;
+  width: 400px;
+  border: none;
+  opacity: 1;
+}
+
+.Linha4 hr {
+  background-color: var(--Cor3);
+  height: 4px;
+  width: 400px;
+  border: none;
+  opacity: 1;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.Linha5 hr {
+  background-color: var(--Cor3);
+  height: 4px;
+  width: 240px;
+  border: none;
+  opacity: 1;
+  margin-top: -5%;
+  margin-left: 8%;
+  position: absolute;
+}
+
+/* ======================== */
+/* TEXTOS          */
+/* ======================== */
+.Titulo1 {
+  color: var(--Cor4);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.Titulo2 {
+  text-align: center;
+  color: var(--Cor6);
+  font-weight: bold;
+}
+
+.Titulo3 {
+  color: var(--Cor3);
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+}
+
+.Titulo4 {
+  margin-top: 15px;
+  color: var(--Cor3);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Titulo5 {
+  color: var(--Cor3);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Titulo6 {
+  color: var(--Cor3);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.Titulo7 {
+  color: var(--Cor4);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.Titulo8 {
+  color: var(--Cor4);
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.Texto1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Texto2 {
+  color: var(--Cor4);
+  text-align: justify;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.Texto3 {
+  color: var(--Cor4);
+  text-align: justify;
+  font-size: 15px;
+  padding: auto;
+  margin: 50px;
+}
+
+.Texto4 {
+  font-weight: bold;
+  color: var(--Cor3);
+}
+.Texto5 {
+  font-weight: bold;
+  color: var(--Cor3);
+  font-size: 13px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.Texto6 {
+  color: var(--Cor4);
+  text-align: justify;
+  font-size: 15px;
+  padding: auto;
+}
+
+.Texto7 {
+  color: var(--Cor4);
+  text-align: center;
+  font-size: 18px;
+  padding: auto;
+}
+.Texto8 {
+  color: var(--Cor7);
+  text-align: center;
+  font-size: 16px;
+  padding: auto;
+  font-weight: bold;
+}
+.Texto9 {
+  color: var(--Cor4);
+  text-align: justify;
+  font-size: 15px;
+  padding: 0 15px; /* Ajuste este valor para controlar o espaçamento do texto */
+}
+.Texto10 a {
+  color: var(--Cor4);
+  text-align: justify;
+  font-size: 15px;
+  padding: 0 15px; /* Ajuste este valor para controlar o espaçamento do texto */
+  text-decoration: none;
+  margin-left: 20px;
+}
+/* ======================== */
+/* RODAPÉ          */
+/* ======================== */
+.Footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  color: var(--Cor4);
+  text-align: center;
+}
+
+.Footer2 {
+  width: auto;
+  height: 50px;
+  background-color: var(--Cor2);
+  color: var(--Cor4);
+  padding: 0;
+  margin-top: -15px;
+  text-align: center;
+}
+
+/* ======================== */
+/* SEÇÕES          */
+/* ======================== */
+section {
+  background-color: #153757;
+  height: 100vh;
+  width: auto;
+}
+
+.Secao1 {
+  background-color: var(--Cor8);
+  padding-top: 150px;
+  border-bottom: solid var(--Cor3) 2px;
+}
+
+.Secao11 {
+  display: flex;
+  justify-content: center; /* Centraliza os cards dentro da Secao11 */
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: calc(2 * 300px + 20px);
+  margin: auto;
+  margin-top: 50px;
+  /* Outros estilos da Secao11 */
+}
+
+.Secao2 {
+  padding-top: 5%;
+  border-bottom: solid var(--Cor3) 2px;
+  background-color: var(--Cor1);
+}
+
+.Secao4 {
+  background-color: var(--Cor8);
+  border-bottom: solid var(--Cor3) 2px;
+  height: 100vh;
+}
+
+.Secao5 {
+  background-color: var(--Cor8);
+  padding: 11%;
+  border-bottom: solid var(--Cor3) 2px;
+  height: 85vh;
+}
+
+.Secao6 {
+  background-color: var(--Cor1);
+  padding: 5%;
+  height: 80vh;
+}
+
+/* ======================== */
+/* IMAGENS          */
+/* ======================== */
+.Secao1 img,
+.Secao2 img,
+.Secao3 img {
+  width: 500px;
+  height: 600px;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 7px;
+  display: inline-block;
+  opacity: 0.5;
+}
+.Secao5 img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: cover;
+  border-radius: 7px;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Exceção - Imagem pequena */
+.Secao1 img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ======================== */
+/* CARDS          */
+/* ======================== */
+.Card1,
+.Card2,
+.Card3,
+.Card4 {
+  width: 300px;
+  height: 270px;
+  border-radius: 7px;
+  background-color: var(--Cor2);
+  transition: 1s;
+  margin: auto;
+  /* Não precisa de mais alterações aqui para o layout em quadrado */
+}
+
+.Card1 img,
+.Card2 img,
+.Card3 img,
+.Card4 img {
+  width: 100%; /* Garante que a imagem preencha a largura do card */
+  height: 200px;
+  object-fit: cover; /* Para manter a proporção da imagem e cobrir o container */
+}
+
+.Card1:hover {
+  padding: 10px;
+  transition: 1s;
+  background-color: rgba(65, 65, 65, 0.7);
+  cursor: pointer;
+}
+
+.Card2:hover {
+  padding: 10px;
+  transition: 1s;
+  background-color: rgba(65, 65, 65, 0.7);
+  cursor: pointer;
+}
+
+.Card3:hover {
+  padding: 10px;
+  transition: 1s;
+  background-color: rgba(65, 65, 65, 0.7);
+  cursor: pointer;
+}
+
+.Card4:hover {
+  padding: 10px;
+  transition: 1s;
+  background-color: rgba(65, 65, 65, 0.7);
+  cursor: pointer;
+}
+
+.Tabela1 {
+  width: 100%;
+  margin: 20px auto;
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: var(--Cor2);
+  color: var(--Cor4);
+  height: 300px;
+}
+
+.Tabela1 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.LinhaTabela:nth-child(even) {
+  background-color: var(--Cor5);
+}
+
+.CelulaTabela {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--Cor4);
+}
+
+.ScrollTabela {
+  max-height: 300px; /* você pode ajustar essa altura */
+  overflow-y: auto;
+}
+
+/* Scroll bonito (opcional) */
+.ScrollTabela::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ScrollTabela::-webkit-scrollbar-thumb {
+  background-color: var(--Cor4);
+  border-radius: 4px;
+}
+
+
+/* CSS media query dentro de um stylesheet */
+@media (max-width: 1366px) {
+  .Caixa4 {
+    width: 1200px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .Card1,
+.Card2,
+.Card3,
+.Card4 {
+  width: 250px;
+  height: 210px;
+  border-radius: 7px;
+  background-color: var(--Cor2);
+  transition: 1s;
+  margin: auto;
+  /* Não precisa de mais alterações aqui para o layout em quadrado */
+}
+
+.Card1 img,
+.Card2 img,
+.Card3 img,
+.Card4 img {
+  width: 100%; /* Garante que a imagem preencha a largura do card */
+  height: 150px;
+  object-fit: cover; /* Para manter a proporção da imagem e cobrir o container */
+}
+.Caixa4 {
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 5px;
+}
+.Caixa4 h4 {
+  font-size: 20px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa4 p {
+  font-size: 13px;
+  margin: 40px;
+  padding: 0;
+  text-align: justify;
+}
+.Secao5 {
+  padding: 125px;
+}
+.Secao6 {
+  padding: 2%;
+}
+}
+@media (max-width: 1440px) {
+.Card1,
+.Card2,
+.Card3,
+.Card4 {
+  width: 300px;
+  height: 210px;
+  border-radius: 7px;
+  background-color: var(--Cor2);
+  transition: 1s;
+  margin: auto;
+  /* Não precisa de mais alterações aqui para o layout em quadrado */
+}
+
+.Card1 img,
+.Card2 img,
+.Card3 img,
+.Card4 img {
+  width: 100%; /* Garante que a imagem preencha a largura do card */
+  height: 150px;
+  object-fit: cover; /* Para manter a proporção da imagem e cobrir o container */
+}
+.Secao1 {
+  padding: 15%;
+}
+.Secao2 {
+  padding: 9%;
+  height: 85vh;
+}
+.Secao5 {
+  padding: 10%;
+  height: 75vh;
+}
+.Secao6 {
+  padding: 2%;
+  height: 70vh;
+}
+}
+
+@media screen and (max-width: 1366px) {
+  
+.Card1,
+.Card2,
+.Card3,
+.Card4 {
+  width: 250px;
+  height: 155px;
+  border-radius: 7px;
+  background-color: var(--Cor2);
+  transition: 1s;
+  margin: auto;
+  /* Não precisa de mais alterações aqui para o layout em quadrado */
+}
+
+.Card1 img,
+.Card2 img,
+.Card3 img,
+.Card4 img {
+  width: 100%; /* Garante que a imagem preencha a largura do card */
+  height: 100px;
+  object-fit: cover; /* Para manter a proporção da imagem e cobrir o container */
+}
+.Secao1 {
+  padding: 10%;
+}
+.Secao2 {
+  padding: 2%;
+  height: 85vh;
+}
+.Caixa4 {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 5px;
+}
+.Caixa4 h4 {
+  font-size: 20px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa4 p {
+  font-size: 13px;
+  margin: 35px;
+  margin-top: 15px;
+  padding: 0;
+  text-align: justify;
+}
+.Secao5 {
+  padding: 6%;
+  height: 75vh;
+}
+.Caixa9 {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto; 
+}
+.Caixa9 h4 {
+  font-size: 20px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa9 p {
+  font-size: 13px;
+  text-align: center;
+}
+.Secao6 {
+  padding: 1%;
+  height: 80vh;
+}
+.Caixa12 {
+  width: 700px;
+  height: 400px;
+  margin: 10px auto;
+}
+.Caixa12 h3 {
+  font-size: 20px;
+  margin: 5px;
+  margin-top: -20px;
+  padding: 0px;
+  text-align: center;  
+}
+.Caixa12 textarea {
+  margin-top: 2%;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--Cor4);
+  color: var(--Cor4);
+  font-size: 16px;
+  resize: vertical; /* ou none para desabilitar */
+}
+.Caixa1 {
+  width: 400px;
+  height: 450px;
+}
+.Caixa2 input[type="text"],
+.Caixa2 input[type="email"],
+.Caixa2 input[type="password"] {
+  background-color: var(--Cor5);
+  border: none;
+  bottom: 0;
+  width: 320px;
+  color: var(--Cor4);
+  margin-top: 4%;
+  font-size: 16px;
+  height: 30px;
+}
+.Caixa2 h3 {
+  margin-top: -25px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa2 input[type="submit"] {
+  margin: 10% 0% 0% 20%;
+  text-align: center;
+  width: 200px;
+  background-color: var(--Cor4);
+  border: none;
+  border-radius: 5px;
+}
+
+.Caixa2 hr {
+  margin-top: -3px;
+  background-color: var(--Cor3);
+  height: 4px;
+  border: none;
+  opacity: 1;
+}
+.Caixa20 {
+  width: 1000px;
+  height: 400px;
+}
+.Caixa20 p {
+  font-size: 13px;
+  text-align: center;
+}
+.Caixa20 h1 {
+  font-size: 15px;
+  margin: 5px;
+  padding: 0px;
+  text-align: center;  
+}
+.Caixa22 {
+  width: 300px;
+  height: 350px;
+  margin-top: -10px;
+}
+}
+@media screen and (max-width: 1360px) {
+  
+.Card1,
+.Card2,
+.Card3,
+.Card4 {
+  width: 250px;
+  height: 155px;
+  border-radius: 7px;
+  background-color: var(--Cor2);
+  transition: 1s;
+  margin: auto;
+  /* Não precisa de mais alterações aqui para o layout em quadrado */
+}
+
+.Card1 img,
+.Card2 img,
+.Card3 img,
+.Card4 img {
+  width: 100%; /* Garante que a imagem preencha a largura do card */
+  height: 100px;
+  object-fit: cover; /* Para manter a proporção da imagem e cobrir o container */
+}
+.Secao1 {
+  padding: 10%;
+}
+.Secao2 {
+  padding: 2%;
+  height: 85vh;
+}
+.Caixa4 {
+  width: 1000px;
+  height: 400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 5px;
+}
+.Caixa4 h4 {
+  font-size: 20px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa4 p {
+  font-size: 13px;
+  margin: 35px;
+  margin-top: 15px;
+  padding: 0;
+  text-align: justify;
+}
+.Secao5 {
+  padding: 6%;
+  height: 75vh;
+}
+.Caixa9 {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto; 
+}
+.Caixa9 h4 {
+  font-size: 20px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa9 p {
+  font-size: 13px;
+  text-align: center;
+}
+.Secao6 {
+  padding: 1%;
+  height: 80vh;
+}
+.Caixa12 {
+  width: 700px;
+  height: 400px;
+  margin: 10px auto;
+}
+.Caixa12 h3 {
+  font-size: 20px;
+  margin: 5px;
+  margin-top: -20px;
+  padding: 0px;
+  text-align: center;  
+}
+.Caixa12 textarea {
+  margin-top: 2%;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--Cor4);
+  color: var(--Cor4);
+  font-size: 16px;
+  resize: vertical; /* ou none para desabilitar */
+}
+.Caixa1 {
+  width: 400px;
+  height: 450px;
+}
+.Caixa2 input[type="text"],
+.Caixa2 input[type="email"],
+.Caixa2 input[type="password"] {
+  background-color: var(--Cor5);
+  border: none;
+  bottom: 0;
+  width: 320px;
+  color: var(--Cor4);
+  margin-top: 4%;
+  font-size: 16px;
+  height: 30px;
+}
+.Caixa2 h3 {
+  margin-top: -25px;
+  padding: 0;
+  text-align: center;
+}
+.Caixa2 input[type="submit"] {
+  margin: 10% 0% 0% 20%;
+  text-align: center;
+  width: 200px;
+  background-color: var(--Cor4);
+  border: none;
+  border-radius: 5px;
+}
+
+.Caixa2 hr {
+  margin-top: -3px;
+  background-color: var(--Cor3);
+  height: 4px;
+  border: none;
+  opacity: 1;
+}
+.Caixa20 {
+  width: 1000px;
+  height: 400px;
+}
+.Caixa20 p {
+  font-size: 13px;
+  text-align: center;
+}
+.Caixa20 h1 {
+  font-size: 15px;
+  margin: 5px;
+  padding: 0px;
+  text-align: center;  
+}
+.Caixa22 {
+  width: 300px;
+  height: 350px;
+  margin-top: -10px;
+}
+}
